@@ -1,0 +1,29 @@
+
+<button class="close" mat-button mat-dialog-close>X</button>
+<div mat-dialog-content>
+  <b>Ticket Id</b><br>
+  <h3>{{ticketDetail.id}}</h3><br>
+
+  <b>Subject</b><br>
+  <h3>{{ticketDetail.subject}}</h3><br>
+
+  <b>Description</b><br>
+  <h3>{{ticketDetail.description}}</h3><br>
+
+  <b>Status</b><br>
+  <h3>{{ticketDetail.status}}</h3><br>
+
+  <b>Requester Id</b><br>
+  <h3>{{ticketDetail.requester_id}}</h3><br>
+
+  <b>Assignee Id</b><br>
+  <h3>{{ticketDetail.assignee_id}}</h3><br>
+
+  <b>Created at</b><br>
+  <h3>{{ticketDetail.created_at| date:'fullDate'}}</h3>
+  
+</div>
+<!-- <div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+</div> -->
