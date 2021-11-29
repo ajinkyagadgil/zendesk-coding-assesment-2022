@@ -3,7 +3,7 @@
 - The backend project is flask project. I have used python 3.8 
 - The folder has requirements.txt which would install all the required packages. 
 - run command pip install -r requirements.txt from backend folder to install dependencies.
-- It has config.json file which has the base url, username and password which can be configured.
+- It has config.json file which has the base url, username and password which can be configured and have to be updated to get the results.
 - Run the backend using python backend.py command.
 - The UI code is written in angular 10. Open the code and run npm install to install all the required package.
 - Then run npm start command to run the angular code.
