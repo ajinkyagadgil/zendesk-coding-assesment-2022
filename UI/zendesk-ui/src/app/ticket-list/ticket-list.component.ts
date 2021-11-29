@@ -7,6 +7,7 @@ import { TicketsModel } from '../models/ticketModel';
 import { TicketsBaseModel } from '../models/ticketsBaseModel';
 import { TicketDetailsComponent } from '../ticket-details/ticket-details.component';
 import { ZendeskService } from '../zendesk.service';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-ticket-list',
@@ -18,7 +19,8 @@ export class TicketListComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   constructor(private zendeskService: ZendeskService,
-    private dialog: MatDialog) { }
+    private dialog: MatDialog,
+    private _snackBar: MatSnackBar) { }
 
   tickets:  MatTableDataSource<TicketsModel>;
   ngOnInit() {
@@ -31,6 +33,8 @@ export class TicketListComponent implements OnInit {
       this.tickets.sort = this.sort;
       this.tickets.paginator = this.paginator;
       console.log(res)
+    },err =>{
+      this._snackBar.open('There is some error. Please try again');
     })
   }
 
